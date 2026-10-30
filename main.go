@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-// ---------- Ejercicio 1 ----------
+//ejercicio 1
 
 func swap(a *int, b *int) {
 	aux := *a
@@ -10,7 +10,7 @@ func swap(a *int, b *int) {
 	*b = aux
 }
 
-// ---------- Ejercicio 2 ----------
+//ejercicio 2
 
 func sum(values []int) int {
 	total := 0
@@ -58,7 +58,7 @@ func printReverse(values []int) {
 	fmt.Println()
 }
 
-// ---------- Ejercicio 3 ----------
+//ejercicio 3
 
 func copyArray(values []int) []int {
 	result := make([]int, len(values))
@@ -68,7 +68,7 @@ func copyArray(values []int) []int {
 	return result
 }
 
-// ---------- Ejercicio 4 ----------
+//ejercicio 4
 
 // inserción, ordena el slice que le pasen
 func sortAscending(values []int) {
@@ -83,7 +83,7 @@ func sortAscending(values []int) {
 	}
 }
 
-// ---------- Ejercicio 5 ----------
+//ejercicio 5
 
 // values debe venir ordenado de menor a mayor
 func findPair(values []int, target int) bool {
@@ -103,7 +103,7 @@ func findPair(values []int, target int) bool {
 	return false
 }
 
-// ---------- Ejercicio 6 ----------
+//ejercicio 6
 
 func threeSum(values []int) int {
 	if len(values) < 3 {
@@ -115,11 +115,11 @@ func threeSum(values []int) int {
 	count := 0
 	n := len(sorted)
 	for i := 0; i < n-2; i++ {
-		// si el menor ya es positivo no hay forma de llegar a cero
+		//si el menor ya es positivo no hay forma de llegar a cero
 		if sorted[i] > 0 {
 			break
 		}
-		// mismo primer valor que antes: ya se probó
+		//mismo primer valor que antes: ya se probó
 		if i > 0 && sorted[i] == sorted[i-1] {
 			continue
 		}
@@ -149,7 +149,7 @@ func threeSum(values []int) int {
 	return count
 }
 
-// ---------- Ejercicio 7 ----------
+//ejercicio 7
 
 func buildLeftMax(height []int, leftMax []int) {
 	if len(height) == 0 {
@@ -180,7 +180,7 @@ func buildRightMax(height []int, rightMax []int) {
 	}
 }
 
-// ---------- Ejercicio 8 ----------
+//ejercicio 8
 
 func minInt(a int, b int) int {
 	if a < b {
@@ -189,7 +189,7 @@ func minInt(a int, b int) int {
 	return b
 }
 
-// con verbose = true imprime el cálculo de cada posición
+// con verbose true imprime el cálculo de cada posición
 func trappedWaterDetail(height []int, verbose bool) int64 {
 	n := len(height)
 	leftMax := make([]int, n)
@@ -214,7 +214,7 @@ func trappedWater(height []int) int64 {
 	return trappedWaterDetail(height, false)
 }
 
-// ---------- Pruebas ----------
+//pruebas
 
 func status(ok bool) string {
 	if ok {
